@@ -21,7 +21,9 @@ app.get('/headers/', (req, res) => {
 	const headers = {};
 	// Filter x-* headers
 	Object.keys(req.headers).forEach(headerName => {
-		if (headerName.substring(0, 2) !== 'x-') headers[headerName] = req.headers[headerName];
+		if (headerName === 'host') return;
+		if (headerName.substring(0, 2) === 'x-') return;
+		headers[headerName] = req.headers[headerName];
 	});
 	const json = JSON.stringify({ headers }, null, '\t');
 	res.set('Content-type', 'application/json').send(json);
