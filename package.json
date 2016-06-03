@@ -1,16 +1,13 @@
 {
   "name": "referrer",
   "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
-  "bin": {
-    "referrer": "index.js"
-  },
+  "description": "Test referrer policy support in any browser",
+  "main": "bin/index.js",
   "scripts": {
     "server": "node bin/index.js"
   },
   "keywords": [],
-  "author": "Philipp Bock <p@philippbock.de> (http://philippbock.de/)",
+  "author": "Philipp Bock <p@philippbock.de> (https://philippbock.de/)",
   "license": "MIT",
   "dependencies": {
     "express": "^4.13.4"
