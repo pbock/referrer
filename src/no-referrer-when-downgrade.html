@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="referrer" content="origin">
+		<title>Referrer Test: no-referrer-when-downgrade</title>
+	</head>
+	<body>
+		<h1>Referrer Test</h1>
+
+		<pre>&lt;meta name="referrer" content="no-referrer-when-downgrade"&gt;</pre>
+
+		<p>
+			The default behaviour.
+			The origin
+			<script type="text/javascript">
+			document.write('(' + window.location.origin + ')');
+			</script>
+			should be sent as the <code>Referer</code> header when moving to a page
+			that is at least as secure as this page.
+		</p>
+		<p>
+			To check, navigate away from this page with one of the following options:
+		</p>
+		<ul>
+			<li><a href="https://httpbin.org/headers">Cross-origin, secure</a></li>
+			<li><a href="http://httpbin.org/headers">Cross-origin, insecure</a></li>
+			<li><a href="headers/">Same-origin</a></li>
+		</ul>
+	</body>
+</html>

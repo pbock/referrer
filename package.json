@@ -1,0 +1,18 @@
+{
+  "name": "referrer",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "referrer": "index.js"
+  },
+  "scripts": {
+    "server": "node bin/index.js"
+  },
+  "keywords": [],
+  "author": "Philipp Bock <p@philippbock.de> (http://philippbock.de/)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}

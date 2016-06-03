@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="referrer" content="unsafe-URL">
+		<title>Referrer Test: unsafe-URL</title>
+	</head>
+	<body>
+		<h1>Referrer Test</h1>
+
+		<pre>&lt;meta name="referrer" content="unsafe-URL"&gt;</pre>
+
+		<p>
+			<strong>Deprecated.</strong>
+			Same as <code><a href="unsafe-url.html">unsafe-url</a></code>.
+			The full URL minus parameters
+			<script type="text/javascript">
+			document.write('(' +
+				window.location.origin + window.location.pathname + ')');
+			</script>
+			should be sent as the <code>Referer</code> header, regardless of protocol.
+		</p>
+		<p>
+			To check, navigate away from this page with one of the following options:
+		</p>
+		<ul>
+			<li><a href="https://httpbin.org/headers">Cross-origin, secure</a></li>
+			<li><a href="http://httpbin.org/headers">Cross-origin, insecure</a></li>
+			<li><a href="headers/">Same-origin</a></li>
+		</ul>
+	</body>
+</html>

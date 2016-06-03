@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="referrer" content="never">
+		<title>Referrer Test: never</title>
+	</head>
+	<body>
+		<h1>Referrer Test</h1>
+
+		<pre>&lt;meta name="referrer" content="never"&gt;</pre>
+
+		<p>
+			<strong>Deprecated.</strong>
+			Same as <code><a href="unsafe-url.html">no-referrer</a></code>.
+			The empty string should be sent as the <code>Referer</code> header.
+		</p>
+		<p>
+			To check, navigate away from this page with one of the following options:
+		</p>
+		<ul>
+			<li><a href="https://httpbin.org/headers">Cross-origin, secure</a></li>
+			<li><a href="http://httpbin.org/headers">Cross-origin, insecure</a></li>
+			<li><a href="headers/">Same-origin</a></li>
+		</ul>
+	</body>
+</html>
