@@ -3,8 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="referrer" content="">
-		<title>Referrer Test: (empty string)</title>
+		<title>Referrer Test: (no tag)</title>
 	</head>
 	<body>
 		<h1>Referrer Test</h1>
@@ -12,9 +11,8 @@
 		<pre>&lt;meta name="referrer" content=""&gt;</pre>
 
 		<p>
-			This page set the referrer policy to the empty string, so the default
-			policy applies. This should be the same as
-			<code><a href="no-referrer-when-downgrade.html">no-referrer-when-downgrade</a></code>.
+			This page has no <code>&lt;meta name="referrer"&gt;</code> tag, so your
+			browser&rsquo;s default behaviour applies.
 		</p>
 		<p>
 			To check, navigate away from this page with one of the following options:
