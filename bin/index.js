@@ -18,7 +18,12 @@ try {
 
 const app = express();
 app.get('/headers/', (req, res) => {
-	const json = JSON.stringify({ headers: req.headers }, null, '\t');
+	const headers = {};
+	// Filter x-* headers
+	Object.keys(req.headers).forEach(headerName => {
+		if (headerName.substring(0, 2) !== 'x-') headers[headerName] = req.headers[headerName];
+	});
+	const json = JSON.stringify({ headers }, null, '\t');
 	res.set('Content-type', 'application/json').send(json);
 })
 app.use(express.static(path.resolve(__dirname, '../src')));
